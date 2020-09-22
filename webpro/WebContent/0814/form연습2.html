@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+	function proc1() {
+		//name을 접근해서 가져옴
+		vname = document.ff.name.value;
+		vgender = document.ff.gender.value;
+		vlike = document.ff.like;
+		res = "이름 : " + vname + "\n";
+		res += "성별 : " + vgender + "\n";
+		res + -"취미 : ";
+		for (i = 0; i < vlike.length; i++) {
+			//console.log(vlike[i].checked)
+			if (vlike[i].checked) {
+				res += vlike[i].value + " ";
+			}
+		}
+
+	document.ff.area.value = res;
+	}
+</script>
+
+
+</head>
+<body>
+
+	<div class="box">
+
+		<form action="" method="" name="ff">
+			이름 : <input type="text" value="" name="name"><br>
+			<br> 성별 : <input type="radio" value="남자" name="gender">남
+			<input type="radio" value="여자" name="gender" checked="checked">여<br>
+			<br> 취미: <input type="checkbox" value="여행" name="like"
+				checked="checked">여행 <input type="checkbox" value="독서"
+				name="like">독서 <input type="checkbox" value="영화감상"
+				name="like">영화감상 <input type="checkbox" value="바둑"
+				name="like">바둑 <input type="checkbox" value="장기" name="like">장기
+			<input type="checkbox" value="등산" name="like">등산 <input
+				type="checkbox" value="낚시" name="like">낚시
+		<br> <br>
+		<input type="button" value="결과출력" onclick="proc1()"> <br>
+		<br>
+		<textarea rows="20" cols="100" name="area" >
+		</textarea>
+		</form>
+
+	</div>
+</body>
+</html>

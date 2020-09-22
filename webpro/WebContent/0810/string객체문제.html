@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+	function proc1() {
+		reg = prompt("주민번호 입력", "991010-1234567");
+
+		s1 = reg.substr(8, 10);
+		if (reg.substr(8, 10) == 3 || 1) {
+			birp = "남자";
+
+		}
+		if (reg.substr(8, 10) == 2 || 4) {
+			birp = "여자";
+		}
+		if(reg.substr(8,10)==3||4){
+			biry=20+reg.substr(0,2);
+		}
+		if(reg.substr(8,10)==1||2){
+			biry=19+reg.substr(0,2);
+		}
+		birm = reg.substr(2,2);
+		bird = reg.substr(4,2);
+		
+		bir =new Date(biry,birm,bird)
+		today = new Date();
+		
+		times = today.getTime()-bir.getTime();
+		
+		birr=Math.floor(times/1000/60/60/24/365);
+
+		res = "생일 : "+biry+"년"+birm+"월"+bird+"일"+"<br>"+"성별 : "+birp +"<br>나이 : "+(birr+1);
+
+		document.querySelector("#result1").innerHTML = res;
+	}
+
+	//반이슬 풀이
+// 	function proc2() {
+// 		reg = prompt("주민번호를 입력해주세요");
+// 		s1 = reg.substr(0,1);
+// 		s2 = reg.substr(1,1);
+// 		s3 = reg.substr(2,1);
+// 		s4 = reg.substr(3,1);
+// 		s5 = reg.substr(4,1);
+// 		s6 = reg.substr(5,1);
+// 		s8 = reg.substr(7,1);
+// 		s9 = reg.substr(8,1);
+// 		s10 = reg.substr(9,1);
+// 		s11 = reg.substr(10,1);
+// 		s12 = reg.substr(11,1);
+// 		s13 = reg.substr(11,1);
+// 		sum =(s1*2)+(s2*3)+(s3*4)+(s4*5)+(s5*6)+(s6*7)+(s8*8)+(s9*9)+(s10*2)+(s11*3)+(s12*4)+(s13*5);
+// 		re1=Math.floor(11/sum);
+// 		re2=11-re1;
+		
+// 		s14=reg.substr(13,1);
+
+// 		if(re2==10){
+// 			regg=0;
+// 		}if(re2==11){
+// 			regg=1;
+// 		}if(re2<=9){
+// 			regg=re2;
+// 		}
+// 		if(s14==regg){
+// 			res="올바른 주민번호입니다."
+// 		}
+// 		if(s14!=regg){
+// 			res="올바른 주민번호가 아닙니다."
+// 		}
+// 		document.querySelector("#result2").innerHTML = res;
+		
+// 	}
+
+	// 선생님 풀이
+	function proc2() {
+		str = "234567892345"; // 문자열
+		code = prompt("주민번호 입력", "991010-1234567")
+		coderarr =code.split("-")// 배열로 리턴
+		code = coderarr[0].concat(coderarr[1]); // 배열 : 9910101234567
+		console.log("code="+code);
+		console.log("code.length="+code.length);
+	
+		sum=0;
+		for(i=0;i<code.length-1;i++){
+			sum+=code[i] * str.substr(i,1)
+		}
+		value = 11 - (sum%11);
+		value = value%10;
+		
+		res = "입력  : " + coderarr[0] + "<br>";
+		if(value==code[code.length-1]){
+			res+= "올바른 주민번호 입니다.";
+		}else{
+			res+= "올바른 주민번호가 아닙니다.";
+		}
+		document.querySelector("#result2").innerHTML = res;
+	}
+</script>
+
+
+
+</head>
+<body>
+	<div class="box">
+		<h3>1. 주민등록번호 입력받아 생년월일, 성별, 나이 출력</h3>
+		<input type="button" value="확인" onclick="proc1()">
+		<div id="result1"></div>
+	</div>
+
+	<div class="box">
+		<h3>2. 주민등록번호 입력받아 주민등록번호의 유효성을 검사</h3>
+		<input type="button" value="확인" onclick="proc2()">
+		<div id="result2"></div>
+	</div>
+</body>
+</html>

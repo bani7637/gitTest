@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		background-color: mediumaquamarine;
+	}
+</style>
+<script>
+	//이벤트에 의한 실행(자바의 메서드와 동일) onclick
+	function proc() {
+	dob = document.querySelector('#bcolor'); //인풋타입 컬러로 접근
+	col = dob.value; //선택한 색상
+	document.body.style.backgroundColor = col;
+	}
+</script>
+</head>
+<body>
+<h2>배경색 선택</h2>
+	<form>
+		선택된 color값으로 배경색을 변경한다.
+		<input type="color" id="bcolor">
+		javascript를 이용하여 선택값을 얻어서 동적으로 변경할 수 있다.<br>
+		javascript에서 input 태그를 접근하기 위해서<br>
+		document.querySelector('#bcolor') 
+	</form>
+<h2>서버 페이지 : test.jsp로 데이터 전송(get)</h2>
+	<form action="test.jsp"  method="get">
+	    I  D : <input type="text" value="bani" name="id"><br>
+		name : <input type="text" value="반이슬" name="name"><br>
+		P  W : <input type="password" name="pass"><br>
+		<input type="submit" value="전송">
+		<input type="button" value="확인" onclick="proc()">
+	</form>
+	<hr color='blue'>
+	
+<h2>서버 페이지 : test.jsp로 데이터 전송(post)</h2>
+	<form action="test.jsp"  method="post">
+	    I  D : <input type="text" value="bani" name="id"><br>
+		name : <input type="text" value="반이슬" name="name"><br>
+		P  W : <input type="password" name="pass"><br>
+		<input type="submit" value="전송">
+	</form>
+	<hr color='blue'>
+	<form action="test.jsp"  method="post">
+	    I  D : <input type="text" value="bani" name="id"><br>
+		name : <input type="text" value="반이슬" name="name"><br>
+		P  W : <input type="password" name="pass"><br>
+		H  P : <input type="tel" name= "tel"><br>
+		e-mail: <input type="text" name="email"><br>
+		B R D: <input type="date" name="birt"><br>
+		<input type="submit" value="전송">
+		<hr color='blue'>
+	</form>
+</body>
+
+
+</html>

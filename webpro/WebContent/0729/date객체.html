@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+	function proc1() {
+		now = new Date();
+		now2 = new Date(98765678);
+		now3 = new Date("2010.02.23");
+		now4 = new Date(2010, 01, 23, 12, 30, 12);
+
+		res = "new Date() : " + now + "<br>";
+		res += "new Date(98765678) : " + now2 + "<br>";
+		res += "new Date('2010.02.23') : " + now3 + "<br>";
+		res += "new Date(2010,01,23,12,30,12) : " + now4 + "<br>";
+
+		document.getElementById('result1').innerHTML = res;
+	}
+
+	function proc2() {
+		now = new Date();
+		sdate = now.toLocaleString();
+		nowdate = now.toLocaleDateString();
+		nowtime = now.toLocaleTimeString();
+
+		res = "new Date()=>&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;now : "
+				+ now + "<br>";
+		res += "toLocaleString()=>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sdate : "
+				+ sdate + "<br>";
+		res += "toLocaleDateString()=>&nbsp;&nbsp;&nbsp;nowdate : " + nowdate
+				+ "<br>";
+		res += "toLocaleTimeString()=>&nbsp;&nbsp;&nbsp;nowtime : " + nowtime
+				+ "<br>";
+
+		document.getElementById('result2').innerHTML = res;
+
+	}
+
+	
+	function proc3() {
+		now = new Date();
+		x = now.getDay();
+
+		if (x == 0) {
+			res = "일요일";
+		} else if (x == 1) {
+			res = "월요일";
+		} else if (x == 2) {
+			res = "화요일";
+		} else if (x == 3) {
+			res = "수요일";
+		} else if (x == 4) {
+			res = "목요일";
+		} else if (x == 5) {
+			res = "금요일";
+		} else {
+			res = "일요일"
+		}
+
+		document.getElementById('result3').innerHTML = res;
+	}
+	
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. Date객체 생성</h3>
+		-new Date() >> 현재날짜 찍힘<br> -new Date(98765678) >> 1970.1.1기준으로
+		경과한(초) 날짜 찍힘<br> -new Date("2010.02.23")<br> -new
+		Date(2000, 02, 23, 12,30, 12)>>숫자로 직접줄때는 월에 -1해줘야함<br> =>0월부터시작,
+		숫자로Date 객체생성시 하나 작은 값으로 설정한다.<br>
+		<br> <input type="button" value="newDate" onclick="proc1()">
+		<div id="result1"></div>
+	</div>
+	<div class="box">
+		<h3>2. Date객체 생성</h3>
+		-now = new Date()<br> -now.toLocaleString() : 날짜와 시간<br>
+		-now.toLocaleDateString() : 날짜<br> -now.toLocaleTimeString() : 시간<br>
+		<br> <input type="button" value="newDate" onclick="proc2()">
+		<div id="result2"></div>
+	</div>
+	<div class="box">
+		<h3>3. Date객체 요일구하기</h3>
+		-now = new Date()<br> -now.getDay() : 0(일요일)~6(토요일)숫자로 나옴<br>
+		<br> <input type="button" value="getDay" onclick="proc3()">
+		<div id="result3"></div>
+	</div>
+</body>
+</html>

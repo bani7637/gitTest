@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+	p{
+		font-size: 1.2em;
+	}
+	p[class=pp]{
+		color: darkturquoise;
+	}
+	span[class==pp]{
+		font-size: 2.0em;
+		font-weight: bold;
+	}
+	strong {
+	font-size: 1.2em;
+	}
+	p[id=p4]{
+		background-color: #f1d1e1;
+	}
+	p[title=무궁화1]{
+		border: 3px solid aquamarine;
+	}
+	p[title]{
+		font-style: italic;
+		color: blue;
+	}
+	p[id]{
+	text-align: center;
+	text-shadow: 20px 10px 5px gold;	
+	}
+</style>
+</head>
+<body>
+<pre>
+	작성팁
+	속성 관련 선택자 []
+	
+	<strong>p[class=pp]</strong>   color: darkturquoise; 
+	<strong>span[class=pp]</strong> font-size: 2.0em;  font-weight: bold;
+	<strong>p[id=p4]</strong> background-color: #f1d1e1;
+	<strong>p[title=무궁화1]</strong> border: 3px solid aquamarine;  
+	<strong>p[title]</strong> font-style: italic;  	color: blue;
+	<strong>p[id]</strong> text-align: center;  text-shadow: 20px 10px 5px gold;	
+	
+	글자의 그림자
+	text-shadow : 20px(x좌표) 10px(y좌표) 5px(선명도, 숫자가 커질수록 흐려진다.) gold(그림자 색상);
+</pre>
+	<div>
+		<p title="무궁화1" id="p1">무궁화 꽃이 피었습니다.</p>
+		<p class="pp">동해물과 백두산이</p>
+		<p title="무궁화2"class="pp">가나다라마바사</p>
+		<p id="p4">아자차카타파하</p>
+		<p class="pp2">영일이삼사오육칠팔구</p>
+		<br>
+		
+		<span class ="pp">사과</span>
+		<span>복숭아</span>
+		<span>수박</span>
+	</div>
+</body>
+</html>

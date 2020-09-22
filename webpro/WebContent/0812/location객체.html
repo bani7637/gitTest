@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+#result2{
+ color : red;
+ font-size: 1.5em;
+}
+</style>
+<script type="text/javascript">
+	function proc1() {
+		res = "href = " + location.href + "<br>";
+		res += "port = " + location.port + "<br>";
+		res += "hostname = " + location.hostname + "<br>";
+		res += "host = " + location.host + "<br>";
+		res += "protocol = " + location.protocol + "<br>";
+		res += "pathname =" + location.pathname + "<br>";
+
+		document.getElementById('result1').innerHTML = res;
+	}
+
+	function proc2() {
+		location.href = "test.jsp";
+	}
+
+	function goPage() {
+		location.href = "test.jsp";
+	}
+	
+	function goPagePost() {
+		//post일떄는 form을 이용
+		//form검색 - id를 이용
+		document.getElementById("ff");
+		//form검색 - name을 이용
+		document.getElementsByName("ff")[0];
+		document.ff.action ="testpost.jsp";
+		document.ff.method="post";
+		document.ff.submit();
+	}
+	
+	function goReplace(url){
+		location.replace(url);
+	}
+	
+	function goReload(){
+	
+	str = ["hello", "happy", "javascript", "jQuery", "HTML", "CSS"];
+	rand = Math.floor(Math.random()*str.length);
+	res=str[rand];
+	document.getElementById('result2').innerHTML = res;
+	setTimeout(function(){
+		location.reload()
+	},1000);
+	}
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. url 정보 얻기</h3>
+		href : 전체url<br> port : 80 >> 기본 web폰트로 생략됨<br> hostname :
+		localhost<br> host : hostname + port 정보<br> pathname :
+		host부분 제외한 정보<br> protocol : http<br> <input type="button"
+			value="확인" onclick="proc1()">
+		<div id="result1"></div>
+	</div>
+
+	<div class="box">
+		<h3>2. location 객체 이용</h3>
+		자동으로 특정페이지(test.jsp) 이동할 때 사용 <input type="button" value="페이지 이동"
+			onclick="proc2()"><br>
+		<br> a태그 이용 : a href속성값으로 javascript함수를 호출하도록 설정한다.<br>
+		href="javascript:함수명" <br>
+		<a href="javascript:goPage()">공지사항목록</a><br>
+		<br> 이벤트사용(get):<input onclick="goPage()" type="button"
+			value="공지사항목록"><br>
+		<br> 이벤트사용(post):
+		<form name="ff" id="ff">
+			<input type="hidden" value="korea" name="id"> <input
+				type="button" onclick="goPagePost()" value="공지사항목록">
+		</form>
+		<br>
+		<br> 새로운 문서로 대채(replace(url)) : 원래 페이지로 돌아올 수 없음.<input type="button" value="공지사항목록" onclick="goReplace('test.jsp')"><br>
+		<br> 현재 문서를 다시 로드<input type="button" value="페이지 재호출" onclick="goReload()"><br>
+		<br>
+		<div id="result2"></div>
+
+
+	</div>
+</body>
+</html>

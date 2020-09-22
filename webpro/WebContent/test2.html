@@ -1,0 +1,70 @@
++
+
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <meta charset= "UTF-8">
+	<style>
+	  p{
+	    background-color : lightsalmon;
+	    color : white;
+	    width : 300px;
+	    height : 100px;
+	  }
+	  span{
+	    background-color : lime;
+	    color : red;
+	    display : inline-block;
+	    width : 300px;
+	    height : 100px;
+	    
+	    margin-bottom :50px;
+	    margin-top : 50px;
+	  }
+	  img{
+	    width :200px;
+		height : 150px;
+	  }
+	</style>
+  </head>
+  <body>
+    head는 없어도 됨. meta charset문장하나만 쓰고 body문장써도 적용가능<br>
+   <br>
+    앞뒤 줄 사이에 여백을 만든다.<br>
+    p태그는 paragraph의 약자로 문장을 나타낸다.<br>
+	p태그는 br태그가 없어도 자동으로 줄이 바뀐다.<br>
+	p태그가 적용된 줄의 처음부터 끝까지 진행함!(한줄전체를 차지)<br>
+	p태그는 block요소<br>
+	p태그는가로크기와 세로크기를 지정할 수 있다<br>
+	<p> Hello! html~~</p>
+	<p>style을 이용해서 문서를 꾸며주세요</p>
+   
+   
+	다음문장에 p태그가 있기때문에 줄바뀜!!<br>
+	앞뒤 여백을 주기 위해서 style에 margin 값을 부여한다.<br>
+	<span>무궁화 꽃이 피었습니다.</span><br>
+	<span>수국꽃이 만발하였습니다.</span><br>
+	
+	<img src="images/cloud03.jpg"><br>
+	img 태그는 이미지를 나타내는 태그다.<br>
+	필수 속성으로 src="이미지이름" 에 표시하고자 하는 이미지 이름을 설정한다.<br>
+	이미지의 크기를 설정 할 수 있다.<br>
+	img는 inline요소 이기 때문에 줄바꿈을 해줘야 줄바꿀수있음.<br>
+	<br>
+    <a href="http://www.naver.com">네이버</a>
+	a태그는 페이지 이동을 실행하는 태그(inline요소)
+	필수 속성으로 href="페이지이름"
+	<br>
+	span태그는 줄바꿔서 작성해도 줄바꿈적용이안됨 br태그를 이용해서 줄바꿈해야함.
+	span태그는 p태그와 달리 span태그 안에있는 내용만 변경됨(지정된 영역만큼만 차지한다.)
+	span태그는 inline요소
+	span태그는 가로크기와 세로크기, 여백(margin)을 지정할 수 없다.<br>
+    span태그는 단, display : inline-block; 를 사용하여<br>
+	span태그는 가로크기와 세로크기, 여백(margin)을 지정할수있다.
+	
+	<!-- 주석 설명문 -->
+	
+	
+  </body>
+<html>

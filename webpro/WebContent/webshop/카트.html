@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+table {
+	border: 2px solid deeppink;
+	border-collapse: collapse;
+	text-align: center;
+	width: 80%;
+	table-layout: fixed;
+	margin: 10px;
+}
+
+#tr1 {
+	height: 50px;
+	background: mistyrose;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+td {
+	height: 40px;
+	background: mistyrose;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+tr {
+	height: 40px;
+	background: lavenderblush;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+caption {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+
+input {
+	height: 20px;
+	width: 40px;
+}
+
+#but {
+	height: 30px;
+	width: 60px;
+	background:;
+	font-size: 1.3em;
+}
+</style>
+
+</head>
+<body>
+
+	<table id="tab1" border="1">
+		<caption>Shopping cart</caption>
+		<tr id="tr1">
+			<th>카테고리</th>
+			<th>가격</th>
+			<th>수량</th>
+			<th>합계</th>
+		</tr>
+
+		<tr>
+			<td>컴퓨터</td>
+			<th>가격 <input type="text" id="price_1">원
+			</th>
+			<th>수량 <input type="text" id="qty_1">개
+			</th>
+			<th id="out_1"></th>
+
+		</tr>
+		<tr>
+			<td>의류</td>
+			<th>가격 <input type="text" id="price_2">원
+			</th>
+			<th>수량 <input type="text" id="qty_2">개
+			</th>
+			<th id="out_2"></th>
+		</tr>
+		<tr>
+			<td>음악</td>
+			<th>가격 <input type="text" id="price_3">원
+			</th>
+			<th>수량 <input type="text" id="qty_3">개
+			</th>
+			<th id="out_3"></th>
+		</tr>
+		<tr>
+			<td>스포츠/레저</td>
+			<th>가격 <input type="text" id="price_4">원
+			</th>
+			<th>수량 <input type="text" id="qty_4">개
+			</th>
+			<th id="out_4"></th>
+		</tr>
+		<tr>
+			<td>가구/인테리어</td>
+			<th>가격 <input type="text" id="price_5">원
+			</th>
+			<th>수량 <input type="text" id="qty_5">개
+			</th>
+			<th id="out_5"></th>
+		</tr>
+		<tr>
+			<td>식품</td>
+			<th>가격 <input type="text" id="price_6">원
+			</th>
+			<th>수량 <input type="text" id="qty_6">개
+			</th>
+			<th id="out_6"></th>
+		</tr>
+	</table>
+	<br>
+	<input type="button" value="합계" onclick="Calc()" id="but">&nbsp;&nbsp;
+	<input type="submit" value="구매" id="but">&nbsp;&nbsp;
+</body>
+<script>
+	function getNum(val) {
+		if (isNaN(res)) {
+			return 0;
+		}else{
+			return price_value * qty_value;
+		}
+		return val;
+	}
+
+	function Calc() {
+		//입력한 값 가져오기  - get
+		price_value = document.getElementById('price_1').value;
+		qty_value = document.getElementById('qty_1').value;
+
+		price_value = parseInt(price_value);
+		qty_value = parseInt(qty_value);
+
+		res = price_value * qty_value;
+		res = getNum();
+
+		document.getElementById('out_1').innerHTML = res;
+
+		//입력한 값 가져오기  - get
+		price_value = document.getElementById('price_2').value;
+		qty_value = document.getElementById('qty_2').value;
+
+		price_value = parseInt(price_value);
+		qty_value = parseInt(qty_value);
+
+		res = price_value * qty_value;
+		res = getNum();
+
+		document.getElementById('out_2').innerHTML = res;
+
+		//입력한 값 가져오기  - get
+		price_value = document.getElementById('price_3').value;
+		qty_value = document.getElementById('qty_3').value;
+
+		price_value = parseInt(price_value);
+		qty_value = parseInt(qty_value);
+
+		res = price_value * qty_value;
+		res = getNum();
+		document.getElementById('out_3').innerHTML = res;
+
+		//입력한 값 가져오기  - get
+		price_value = document.getElementById('price_4').value;
+		qty_value = document.getElementById('qty_4').value;
+
+		price_value = parseInt(price_value);
+		qty_value = parseInt(qty_value);
+
+		res = price_value * qty_value;
+		res = getNum();
+
+		document.getElementById('out_4').innerHTML = res;
+
+		//입력한 값 가져오기  - get
+		price_value = document.getElementById('price_5').value;
+		qty_value = document.getElementById('qty_5').value;
+
+		price_value = parseInt(price_value);
+		qty_value = parseInt(qty_value);
+
+		res = price_value * qty_value;
+		res = getNum();
+
+		document.getElementById('out_5').innerHTML = res;
+
+		//입력한 값 가져오기  - get
+		price_value = document.getElementById('price_6').value;
+		qty_value = document.getElementById('qty_6').value;
+
+		price_value = parseInt(price_value);
+		qty_value = parseInt(qty_value);
+
+		res = price_value * qty_value;
+
+		res = getNum();
+
+		document.getElementById('out_6').innerHTML = res;
+
+	}
+</script>
+</html>

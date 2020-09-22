@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href="../css/public.css">
+<style type="text/css">
+textarea{
+text-align: center;
+font-size: 1.5em;
+}
+</style>
+<script type="text/javascript">
+function proc1() {
+	vgu = document.ff.gu.value;
+	res = vgu+" 단"+"\n\n";
+	a=0;
+	for (i = 1; i < 10; i++) {
+		a = vgu*i;
+		res += vgu+"*"+i+"="+a+"\n";
+		}
+	
+
+document.ff.area.value = res;
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+		<form action="" method="" name="ff">
+		구구단 <input type="text" value="" name="gu">단
+		<input	type="button" value="출력" onclick="proc1()"> <br><br>
+		<textarea rows="10" cols="20" name="area" >
+		</textarea>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href="../css/public.css">
+<style type="text/css">
+#result1{
+width:200px;
+height: 300px; 
+text-align: center;
+
+}
+
+</style>
+
+<script>
+
+function proc1() {
+	 sel = document.getElementById("sel");
+	 val = sel.options[sel.selectedIndex].value;
+	
+	res = val+" 단"+"<br><br>";
+	a=0;
+	for (i = 1; i < 10; i++) {
+		a = val*i;
+		res += val+"*"+i+"="+a+"<br>";
+		}
+	
+document.getElementById('result1').innerHTML= res;
+}
+	
+	
+	
+
+
+</script>
+</head>
+<body>
+
+<div class="box" name ="ff">
+		<select id=sel>
+ 		<option value="2">2단</option> 
+ 		<option value="3">3단</option> 
+ 		<option value="4">4단</option> 
+ 		<option value="5">5단</option> 
+ 		<option value="6">6단</option> 
+ 		<option value="7">7단</option> 
+ 		<option value="8">8단</option> 
+ 		<option value="9">9단</option>
+ 		</select>
+		<input	type="button" value="확인" onclick="proc1()">
+		<br><h2>결과출력</h2>
+		<div id="result1" name="area"></div>
+	</div>
+</body>
+</html>

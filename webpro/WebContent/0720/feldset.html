@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+	
+	fieldset {
+		width: 50%
+	}
+	label {
+		display: inline-block;
+		width: 80px;
+		height: 40px;
+	}
+	#co{
+	border: 2px solid blue;
+	}
+
+
+</style>
+</head>
+
+<body>
+	<pre>
+	작성팁 
+	fieldset : 입력항목들의 그룹핑
+	legend : fieldset의 제목
+	label: 일반문자, 문자의 길이를 같게 하기 위해서 사용
+			=>inline요소이기 때문에 display : inline-block의 형태로 스타일을 지정해야만 
+			                                                    가로세로 길이를 설정할 수 있다.
+	</pre>
+
+
+
+	<form>
+		<fieldset>
+		<legend>인적사항 </legend>
+		
+		<label>이름</label>
+		<input type="text"> <br>
+			
+		<label>전화번호</label>
+		<input type="text"><br> 
+		
+		</fieldset>
+		<br>
+		
+	
+		<fieldset>
+		<legend>경력사항 </legend>
+		
+		<label>이메일</label>
+		<input type="text"><br> 
+		
+		<label>생일</label>
+		<input type="date"><br>
+		</fieldset>
+		
+		<hr>
+		
+		
+		<h2 id=co2>이메일 전송화면</h2>
+		<fieldset id="co">
+		
+		<label>이름</label>
+		<input type="text"> <br>
+		
+		<label>이메일</label>
+		<input type="text"><br> 
+		
+		<label>내용</label><br>
+		<textarea contents="area" rows="10" cols="60"></textarea>
+		
+		<br>
+		<input type="submit" value="전송">
+		<input type="reset" value="재설정">
+		
+			
+		</fieldset>
+		<br>
+		<hr>
+		
+		<h2 id=co2>회원 가입 화면</h2>
+	
+		<fieldset id="co">
+		<label>이름</label>
+		<input type="text"> <br>
+		
+		<label>주소</label>
+		<input type="text"><br> 
+		
+		<label>이메일</label>
+		<input type="text"><br> 
+		
+		<input type="radio" value="Male">Male<br> 
+		<input type="radio" value="Female">Female<br> 
+		
+		<br>
+		<input type="submit" value="send">
+		<input type="reset" value="원래대로">
+			
+		</fieldset>
+		
+	
+	</form>
+</body>
+</html>

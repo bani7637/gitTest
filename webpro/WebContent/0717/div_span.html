@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <link rel ="stylesheet" href="../css/public.css">
+<style>
+#tip{
+		border : 2px solid green;
+		background: lawngreen;
+		word-wrap: break-word; /* 글자가 공백없이 길어졌을경우 밖으로 빠져나가는 것을 방지하고 글자를 잘라서 내부로 들어오게 할경우 사용*/
+		width:  calc(95% - 3px);
+	}
+  div#out{
+		height: 450px;
+		border : 2px solid blue;
+		margin : 10px;
+		padding: 20px;
+  }
+  h2{
+  		border: 1px solid black;
+  		padding: 10px;
+  		text-align: center;
+	}
+  .in{
+  		height :300px;
+ 		float: left;
+ 		border : 2px solid blue;
+ 		margin: 10px;
+ 		padding: 10px;
+ 		box-sizing: border-box;
+   }	
+   #dimg{
+    	 width: calc(30% - 1% );
+   }
+   #cont{
+        width: calc(50% - 1% );
+ 		overflow: auto;
+   }
+   img{
+   	 width: 100%;
+   	 height: 100%
+   }
+   span {
+	 	background: yellow;
+	 	color: red;
+	 	display: inline-block;
+	 	width:300px; 
+	 	height:30px;
+	 	font-size: 1.2em;
+	 	font-weight: bold;
+	}
+	strong{
+		font-size: 2em;
+	}
+	.sp{
+		background: lightblue;
+	}
+}
+</style>
+</head>
+<body>
+<div id="tip">
+	작성팁<br>
+	태그에 <Strong>class속성과 id속성</Strong>을 부여 할 수 있다.<br>
+	<Strong>class 속성</Strong>: 여러개의 요소를 같은 형식의 수타일을 주고자 할때, css에서 <span>.class이름</span>으로 지정한다.
+	<br><Strong>id 속성</Strong>: 여러개의 요소중 특정요소로 지정하고자 할때, 특별한 스타일을 지정하고자 할때, css에서 <span>#id이름</span>으로 사용한다.
+	<br><Strong>box-sizing</Strong>: 브라우저의 크기를 조절할때 <span>내용도 같이 조절</span>되어야 한다.
+	<br><strong>whidth:calc(30% - 1%)</strong>=> 가로길이의 기준을 30%로 하고 줄일때마다 1%씩 <span class="sp">재계산</span>되어 조절된다.  
+</div>
+  <div id="out">
+	 <h2>사자</h2>
+	 <div class ="in" id="dimg">
+	 <img src="../images/사자2.jpg" alt="">
+	 </div>
+	 <div class="in" id="cont"> 사자는 어흥  :(<br><br>사냥은 낮에도 하지만 주로 밤에 하는데 낮보다는 먹잇감을 쉽게 기습할 수 있기 때문이다.
+	 
+	 
+	  아프리카사자는 주로 검은꼬리누, 톰슨가젤과 그랜트가젤, 임팔라, 큰쿠두 등의 영양류와 얼룩말, 혹멧돼지, 레서쿠두, 리추에, 일런드, 검은영양, 니알라영양, 겜스복 등을 잡아먹고 아시아사자는 멧돼지, 아시아물소, 액시스사슴, 삼바사슴, 닐가이영양, 인도영양, 까마귀, 네뿔영양 그리고 가축을 잡아먹으며, 유럽사자는 살아있을때 멧돼지, 붉은사슴, 다마사슴, 유럽노루, 샤모아, 유럽들소 등을 잡아먹었었다.수사자는 영역을 돌보면서 자신의 왕국을 지킨다. <br>교배들을 통하여 자신들의 후손을 만들어내는데 큰 역할을 하며 젊은 수사자들은 공동체를 떠나 다른 왕국의 늙은 수사자들을 몰아내고 그 <span>수사자들의 새끼는 죽이고 자신들의 후손을 번식시킨다.</span> 수명은 암사자보다 짧다. 수사자는 새끼들을 거의 돌보지 않지만, 위기일때 돌본다. 다른 수사자가 자신의 자리를 차지하게 될 경우 새끼들을 물어죽이는 습성이 있기 때문에 수사자들은 자신의 새끼를 보호하기 위해 다른 수사자와 싸울 때 최고의 용맹을 보인다.</div>
+  </div>
+</body>
+</html>

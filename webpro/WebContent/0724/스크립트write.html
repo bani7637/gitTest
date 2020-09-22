@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href="../css/public.css">
+<style>
+	div{
+		width: 50%;
+		height: 100px;
+		background: linen;
+	}
+	</style>
+
+</head>
+<body>
+<pre>
+	확인버튼을 클릭하면 proc1()함수가 호출된다.
+	proc1()함수에서 Date객체 생성 후 
+ 	document.write()를 이용하여 브라우저에 출력한다.
+ 	출력하기전에 이미 만들어져 있는 document문서는 사라진다.
+	
+</pre>
+<input type ="button" id="btn1" value="확인" onclick="proc1()"> 
+<br>
+<hr>
+<pre>
+	출력버튼을 클릭하면 proc2()함수가 호출된다.
+	proc2()함수에서 Date객체 생성 후 
+	div에 출력한다.
+	
+	div에 출력하기 위해서는 접근방법이 필요하다.
+	방법 1 )document.querySelector('div')
+	방법 2 )document.querySelector('#out')
+	방법 3 )document.getElementById('out')
+	방법 4 )document.getElementsByTagName('div')[0]
+	
+	출력 : div객체변수.innerHTML = 출력내용
+</pre>
+<input type ="button" value="출력" onclick="proc2()"> 
+<div id="out"></div>
+<script>
+	function proc1() {
+		var now = new Date();
+ 		document.write(now + "<br>");
+	}
+	function proc2() {
+		var now = new Date();
+ 		let vout = document.getElementById('out');
+ 		vout.style.fontSize = '1.5em';
+ 		vout.innerHTML = now;
+		
+	}
+</script>
+</body>
+</html>

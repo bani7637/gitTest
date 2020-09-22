@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+header {
+	height: 90px;
+	width: calc(100% - 1%);
+	text-align: center;
+	box-sizing: border-box;
+	margin-bottom: 6px;
+	background: LightSalmon;
+	border-radius: 35px 35px;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+	color: black;
+}
+
+#aid {
+	color: white;
+}
+
+h1 {
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align: center;
+}
+
+nav {
+	padding: 10px;
+	width: calc(100% - 1%);
+	height: 50px;
+	float: left;
+	letter-spacing: 5px;
+	box-sizing: border-box;
+	background: LightPink;
+	margin-bottom: 8px;
+	border-radius: 35px 35px;
+}
+
+img {
+	width: 50px;
+	height: 50px;
+	float: inherit;
+	margin-top: 15px;
+}
+
+#nav_list {
+	list-style-type: none;
+	float: inherit;
+	margin-left: 11%;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+}
+
+#left {
+	background: PapayaWhip;
+	width: calc(18% - 1%);
+	display: inline-block;
+	vertical-align: top;
+	height: 655px;
+	border-radius: 35px 35px;
+	padding-bottom: 6%;
+}
+
+#left_list {
+	margin: 20px;
+	list-style-type: none;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#main {
+	width: calc(64% - 1%);
+	display: inline-block;
+	vertical-align: top;
+	height: 750px;
+	border-radius: 35px 35px;
+	background: oldlace;
+	text-align: center;
+}
+
+#right {
+	display: inline-block;
+	vertical-align: top;
+	background: PapayaWhip;
+	width: calc(19% - 1%);
+	height: 750px;
+	margin-bottom: 6px;
+	border-radius: 35px 35px;
+}
+
+.title {
+	font-size: 25px;
+	color: black;
+	font-weight: bold;
+	margin-left: 20px;
+	padding-top: 20px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#if {
+	width: 90%;
+	height: 700px;
+	margin-top: 20px;
+}
+
+footer {
+	height: 40px;
+	width: calc(100% - 1%);
+	text-align: center;
+	box-sizing: border-box;
+	background: LightPink;
+	color: white;
+	padding: 10px;
+	border-radius: 35px 35px;
+}
+
+.ri {
+	padding-left: 8px;
+}
+
+#homeid {
+	font-size: 33px;
+	color: white;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>
+			<img src="../images/컴퓨터3.jpg"> &nbsp;<a href="" id="homeid">Web
+				Shop</a>
+		</h1>
+	</header>
+	<nav>
+		<li id="nav_list"><a href="" id="aid" title="main화면으로 이동합니다.">Home</a></li>
+		<li id="nav_list"><a href="" id="aid" title="아직 기능을 추가하지않았습니다.">About
+				Us</a></li>
+		<li id="nav_list"><a href="" id="aid" title="아직 기능을 추가하지않았습니다.">News</a></li>
+		<li id="nav_list"><a href="" id="aid" title="아직 기능을 추가하지않았습니다.">My
+				Account</a></li>
+		<li id="nav_list"><a href="" id="aid" title="아직 기능을 추가하지않았습니다.">Contacts</a></li>
+	</nav>
+
+	<aside id="left">
+		<br>
+		<hgroup class="title">카테고리
+		</hgroup>
+		<li id="left_list"><a href="computer.html" target="ifr">컴퓨터</a></li>
+		<li id="left_list"><a href="clothig.html" target="ifr">의류</a>
+		</li>
+		<li id="left_list"><a href="음악.html" target="ifr">음악</a>
+		</li>
+		<li id="left_list"><a href="영화.html" target="ifr">영화</a>
+		</li>
+		<li id="left_list"><a href="스포츠레저.html" target="ifr">스포츠/레저</a>
+		</li>
+		<li id="left_list"><a href="가구인테리어.html" target="ifr">가구/인테리어</a>
+		</li>
+		<li id="left_list"><a href="식품.html" target="ifr">식품</a>
+		</li>
+	</aside>
+	<section id="main">
+		<article id="article">
+			<iframe id="if" src="" name=ifr></iframe>
+		</article>
+	</section>
+	<aside id="right">
+		<br>
+		<div class="ri" id="title">
+			<hgroup class="title">Shopping Cart
+			</hgroup>
+			<br> 현재 쇼핑카트에 물품이 없습니다.<br> <br> <a href="카트.html" target="ifr">쇼핑카트보러가기</a>
+		</div>
+
+		<div class="ri" id="login">
+			<hgroup class="title">Log_In
+			</hgroup>
+			<br>
+			
+			<form action="" method="post" >
+				Id :<br> <input type="text" value="" name="id" class="ri"><br>
+				Pw :<br> <input type="password" name="pass" class="ri"><br>
+				<br> <input type="submit" value="로그인" class="ri"></a>
+				<input type="reset" value="초기화" class="ri" ><br>
+				<a	href="회원가입.html" target="ifr">회원가입</a>&nbsp; <a href="">비밀번호분실</a>
+			</form>
+	</aside>
+	<footer>copyright(c)2020 bani</footer>
+</body>
+</html>

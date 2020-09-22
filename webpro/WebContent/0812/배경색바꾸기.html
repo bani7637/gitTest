@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href="../css/public.css">
+ <style type="text/css">
+ 	#clear{ 
+		display: none; 
+ 	} 
+
+</style>
+<script>
+// 	window.onload = function(){
+// 		document.querySelector("#clear").style.display = "none";
+// 	}
+
+	function proc1(but){
+		but.style.display = "none";
+		clear.style.display ="inline";
+		ok=but;
+		result1 = document.body;
+		a = setInterval(function(){
+			cr = Math.floor(Math.random()*255);
+			cg = Math.floor(Math.random()*255);
+			cb = Math.floor(Math.random()*255);
+				
+			result1.style.backgroundColor = `rgb(${cr}, ${cg}, ${cb})`;
+			
+		}, 1000);
+	}
+	
+	function proc2(){
+		ok.style.display ="inline";
+		clear.style.display ="none";
+		clearInterval(a);
+	}
+	
+</script>
+</head>
+<body>
+
+<div class="box">
+		<h3>1. 1초마다 한번씩 배경색 바꾸기</h3>
+		종료버튼 만들기(종료버튼은 처음엔 안보이고 확인버튼만 보임 확인버튼누르면 종료버튼만 보임)<br>
+		<input	type="button" value="확인" onclick="proc1(this)" id ="ok"> 
+		<input	type="button" value="종료" onclick="proc2()" id ="clear">
+		<div id="result1"></div>
+	</div>
+</body>
+</html>
